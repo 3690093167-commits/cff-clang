@@ -9,9 +9,9 @@ int main() {
     }
     print(sum);
     if (sum > 9) {
-        print(1);
+        print(1, int);
     } else {
-        print(0);
+        print(0, int);
     }
     for (ch in "AB") {
         print(ch);

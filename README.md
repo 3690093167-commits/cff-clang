@@ -68,6 +68,21 @@ int main() {
 
 支持的语句：变量声明、赋值、`if` / `else`、`while`、`for`、`break`、`continue`、`ret`、函数定义与调用、`import <pkg>`、`namesp <lib>`。
 
+### print 的类型标注
+
+`print` 是内建语句，**字面量参数必须显式标注类型**；变量、函数调用与 `*p` 按自身类型输出，可省略标注。
+
+| 写法 | 结果 |
+|---|---|
+| `print("hi", str)` | ✅ 按字符串输出（字符串一律用双引号） |
+| `print(42, int)` | ✅ 按整数输出 |
+| `print('A', char)` | ✅ 单字符 |
+| `print(v)` | ✅ 变量按自身类型输出，无需标注 |
+| `print("hi")` / `print(42)` / `print('A')` | ❌ 缺少类型标注，报 `print of a literal requires a type` |
+| `print('hi')` / `print('hi','str')` | ❌ 单引号只表示单个字符，报 `unterminated char literal` |
+
+可用标注：`int`、`bigint`、`char`、`str` / `string`、`bool`。
+
 ## 构建
 
 需要 NASM（默认路径 `C:\Program Files\NASM\nasm.exe`）：
@@ -80,7 +95,8 @@ nasm -f bin src/gffc.asm -o bin/gffc.exe
 
 - 函数实参暂不支持二元表达式，需先算入变量再传：`int c = a + b; putnum(c);`
 - `ret` 只接受变量或常量，`ret x + y` 会报错
-- `print` 的字符分支只接受单字符字面量
+- `print` 的字面量参数必须显式标注类型（见「print 的类型标注」），字符串一律用双引号：`print("hi", str)`
+- 单引号只表示单个字符，`print('hi')` 这类多字符单引号会报 `unterminated char literal`
 - 报错行号按库展开后的源码计数，引入库时报错行号可能大于实际文件行数
 
 ## 关于这个项目

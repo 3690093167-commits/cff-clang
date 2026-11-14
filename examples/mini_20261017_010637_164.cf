@@ -1,4 +1,4 @@
 int main() {
-    print("A");
+    print("A", str);
     ret 0;
 }

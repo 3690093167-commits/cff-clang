@@ -2172,6 +2172,22 @@ parse_prog:
     inc qword [rel stmts_cnt]
     jmp .type_done
 .no_type:
+    ; literals must carry an explicit type annotation: print(42, int) / print("hi", str)
+    mov rcx, [rel stmts_cnt]
+    lea rdx, [rel stmts]
+    imul rcx, rcx, 32
+    add rdx, rcx
+    mov eax, dword [rdx]
+    cmp eax, 1
+    je .no_type_need
+    cmp eax, 2
+    je .no_type_need
+    jmp .no_type_ok
+.no_type_need:
+    lea rax, [rel msg_print_need_type]
+    call err_set_syntax
+    jmp .fail
+.no_type_ok:
     inc qword [rel stmts_cnt]
 .type_done:
     call ws_skip
@@ -9732,6 +9748,7 @@ msg_invalid: db 'invalid syntax', 0
 msg_missing_main: db 'missing main function', 0
 msg_unterm_str: db 'unterminated string literal', 0
 msg_unterm_char: db 'unterminated char literal', 0
+msg_print_need_type: db 'print of a literal requires a type: print(value, int|str|char)', 0
 msg_expected_q: db "expected '", 0
 msg_param_kw: db 'cannot use keyword as parameter name', 0
 msg_expect_char: db 'unexpected character ', 0

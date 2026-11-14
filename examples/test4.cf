@@ -3,7 +3,7 @@ imp <time>;
 imp <random>;
 namesp test;
 int main() {
-    print("second now: ");
+    print("second now: ", str);
     print(time.now());
     int i = 0;
     while (i < 5) {

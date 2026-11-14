@@ -1,6 +1,6 @@
 imp <iostrpm>;
 namesp test;
 int main() {
-    print("hello win");
+    print("hello win", str);
     ret 0;
 }

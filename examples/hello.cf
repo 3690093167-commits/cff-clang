@@ -2,6 +2,6 @@ imp <iostrpm>
 namesp iostrpm;
 
 int main() {
-    print("Hello, CF 0.1!");
+    print("Hello, CF 0.1!", str);
     ret 0;
 }
