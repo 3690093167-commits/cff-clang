@@ -1,0 +1,9 @@
+imp <iostrpm>;
+namesp test;
+int main() {
+    bigint b = 0xFFFFFFFF;
+    print(b);
+    bigint c = b + 2;
+    print(c);
+    ret 0;
+}

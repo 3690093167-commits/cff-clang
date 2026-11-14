@@ -1,0 +1,1 @@
+﻿imp <iostrpm>; namesp iostrpm; int main(){ print(19,'int'); ret 0; }

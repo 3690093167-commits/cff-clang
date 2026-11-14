@@ -1,0 +1,20 @@
+imp <iostrpm>;
+namesp test;
+int main() {
+    int i = 0;
+    int sum = 0;
+    while (i < 5) {
+        sum = sum + i;
+        i = i + 1;
+    }
+    print(sum);
+    if (sum > 9) {
+        print(1);
+    } else {
+        print(0);
+    }
+    for (ch in "AB") {
+        print(ch);
+    }
+    ret 0;
+}

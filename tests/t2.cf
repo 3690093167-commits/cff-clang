@@ -1,0 +1,5 @@
+imp <iostrpm>;
+namesp CF;
+int main() {
+    ret 0;
+}

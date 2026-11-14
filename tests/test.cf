@@ -1,0 +1,8 @@
+imp <iostrpm>
+namesp iostrpm;
+
+int main(){
+    print("Hello, CF 0.1!",'str');
+    print("From Linux ELF",'str');
+    ret 0;
+}

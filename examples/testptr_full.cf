@@ -1,0 +1,11 @@
+def main() {
+  a = 42
+  p = &a
+  print(a, int)
+  print(*p, int)
+  *p = 100
+  print(a, int)
+  b = *p
+  print(b, int)
+  ret 0
+}

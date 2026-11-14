@@ -1,0 +1,19 @@
+imp <iostrpm>;
+imp <crdso>;
+imp <time>;
+imp <random>;
+namesp test;
+int main() {
+    bigint b = 0xFFFFFFFF;
+    print(b);
+    bigint c = b + 2;
+    print(c);
+    char ch = 65;
+    print(ch);
+    print(0x100000001);
+    int r = random.next();
+    print(r);
+    int t = time.now();
+    print(t);
+    ret 0;
+}

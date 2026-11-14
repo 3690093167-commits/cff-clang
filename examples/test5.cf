@@ -1,0 +1,12 @@
+imp <iostrpm>;
+namesp test;
+int main() {
+    char c = 'A';
+    char d = 'B';
+    print(c);
+    print(d);
+    c = '!';
+    print(c);
+    print(" done");
+    ret 0;
+}

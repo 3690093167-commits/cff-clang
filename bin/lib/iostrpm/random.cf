@@ -1,0 +1,12 @@
+def rnd(int n) {
+    int r = rand();
+    int v = r % n;
+    ret v;
+}
+def between(int lo, int hi) {
+    int span = hi - lo;
+    int span1 = span + 1;
+    int r = rand();
+    int v = r % span1;
+    ret lo + v;
+}

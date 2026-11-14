@@ -1,0 +1,42 @@
+imp <iostrpm>
+namesp iostrpm;
+
+int main(){
+    int a = 5;
+    int b = 7;
+    int sum = a + b * 2;
+    print("Sum = ",'str');
+    print(sum,'int');
+    print("\n",'str');
+
+    if(sum > 15){
+        print("big\n",'str');
+    } else {
+        print("small\n",'str');
+    }
+
+    int i = 0;
+    while(i < 3){
+        print("loop ", 'str');
+        print(i, 'int');
+        print("\n", 'str');
+        i = i + 1;
+    }
+
+    int k;
+    for(k in range(1, 4)){
+        print("range ", 'str');
+        print(k, 'int');
+        print("\n", 'str');
+    }
+
+    int addr;
+    for(addr in OS.RAM){
+        print("addr=", 'str');
+        print(addr, 'int');
+        print("\n", 'str');
+        if(addr > 0x401000){ }
+    }
+
+    ret sum;
+}

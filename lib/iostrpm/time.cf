@@ -1,0 +1,4 @@
+def now() {
+    int t = tick_ms();
+    ret t;
+}

@@ -1,0 +1,7 @@
+imp <iostrpm>
+namesp iostrpm;
+
+int main() {
+    print("Hello, CF 0.1!");
+    ret 0;
+}

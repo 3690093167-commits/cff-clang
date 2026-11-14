@@ -1,0 +1,14 @@
+imp <iostrpm>;
+imp <time>;
+imp <random>;
+namesp test;
+int main() {
+    print("second now: ");
+    print(time.now());
+    int i = 0;
+    while (i < 5) {
+        print(random.next());
+        i = i + 1;
+    }
+    ret 0;
+}

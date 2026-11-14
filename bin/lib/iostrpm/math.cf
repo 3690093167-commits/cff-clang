@@ -1,0 +1,36 @@
+def add(int a, int b) {
+    ret a + b;
+}
+def sub(int a, int b) {
+    ret a - b;
+}
+def mul(int a, int b) {
+    ret a * b;
+}
+def div(int a, int b) {
+    ret a / b;
+}
+def mod(int a, int b) {
+    ret a % b;
+}
+def max2(int a, int b) {
+    int r = a;
+    if (a < b) {
+        r = b;
+    }
+    ret r;
+}
+def min2(int a, int b) {
+    int r = a;
+    if (b < a) {
+        r = b;
+    }
+    ret r;
+}
+def abs2(int a) {
+    int r = a;
+    if (a < 0) {
+        r = 0 - a;
+    }
+    ret r;
+}

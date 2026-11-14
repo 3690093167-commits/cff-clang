@@ -1,0 +1,4 @@
+import <inner>;
+def probe1() {
+    ret 11;
+}

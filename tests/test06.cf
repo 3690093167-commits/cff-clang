@@ -1,0 +1,39 @@
+imp <iostrpm>;
+namesp CF;
+int main() {
+    int a;
+    a = add(3, 4);
+    print(a, 'int');
+    print('\n', 'str');
+    int s;
+    s = sum(5);
+    print(s, 'int');
+    print('\n', 'str');
+    int f;
+    f = fib(7);
+    print(f, 'int');
+    print('\n', 'str');
+    ret 0;
+}
+int add(int x, int y) {
+    ret x + y;
+}
+int sum(int n) {
+    int i;
+    int t;
+    t = 0;
+    for (i in range(1, n + 1)) {
+        t = t + i;
+    }
+    ret t;
+}
+int fib(int n) {
+    if (n < 2) {
+        ret n;
+    }
+    int a;
+    int b;
+    a = fib(n - 1);
+    b = fib(n - 2);
+    ret a + b;
+}

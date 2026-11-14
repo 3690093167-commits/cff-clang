@@ -1,0 +1,21 @@
+def putnum(int v) {
+    print(v);
+    ret 0;
+}
+def nl() {
+    putch(10);
+    ret 0;
+}
+def putln(int v) {
+    print(v);
+    putch(10);
+    ret 0;
+}
+def puts(str txt) {
+    print(txt);
+    ret 0;
+}
+def puterr(str txt) {
+    os.print_s(txt);
+    ret 0;
+}

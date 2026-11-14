@@ -1,0 +1,5 @@
+imp <iostrpm>;
+namesp test;
+int main() {
+    ret 0;
+}

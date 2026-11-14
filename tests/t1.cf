@@ -1,0 +1,12 @@
+imp <iostrpm>;
+namesp CF;
+int main() {
+    int a;
+    a = add(2, 3);
+    print(a, 'int');
+    print('\n', 'str');
+    ret 0;
+}
+int add(int x, int y) {
+    ret x + y;
+}

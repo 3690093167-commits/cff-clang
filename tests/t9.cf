@@ -1,0 +1,11 @@
+imp iostrpm;
+namesp iostrpm;
+int main() {
+    int a = iostrpm.read();
+    int b = iostrpm.read();
+    int sum = a + b;
+    print(sum);
+    int c = iostrpm.getchar();
+    print(c);
+    ret 0;
+}

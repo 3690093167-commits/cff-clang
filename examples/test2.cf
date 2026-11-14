@@ -1,0 +1,18 @@
+imp <iostrpm>;
+namesp test;
+int main() {
+    int i = 0;
+    while (i < 5) {
+        print(i);
+        i = i + 1;
+    }
+    for (c in "AB") {
+        print(c);
+    }
+    if (3 > 2) {
+        print("if-ok");
+    } else {
+        print("if-no");
+    }
+    ret 0;
+}

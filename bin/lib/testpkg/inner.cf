@@ -1,0 +1,3 @@
+def probe2() {
+    ret 22;
+}

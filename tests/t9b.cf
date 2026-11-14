@@ -1,0 +1,3 @@
+﻿imp iostrpm;
+namesp iostrpm;
+int main() { int c = iostrpm.getchar(); print(c); ret 0; }

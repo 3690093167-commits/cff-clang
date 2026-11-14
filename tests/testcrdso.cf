@@ -1,0 +1,12 @@
+imp <crdso>;
+int main(){
+    crdso.write("crdso 0.6 ok!");
+    print("\n", 'str');
+    int p;
+    p = crdso.getpid();
+    print("pid=", 'str');
+    print(p, 'int');
+    print("\n", 'str');
+    crdso.exit(3);
+    ret 0;
+}

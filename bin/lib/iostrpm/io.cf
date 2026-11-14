@@ -1,0 +1,20 @@
+def next() {
+    int v = read_num();
+    ret v;
+}
+def getch() {
+    int c = get_char();
+    ret c;
+}
+def outch(int c) {
+    putch(c);
+    ret 0;
+}
+def strlen(str txt) {
+    int n = str_len(txt);
+    ret n;
+}
+def strchar(str txt, int i) {
+    int c = str_get(txt, i);
+    ret c;
+}

@@ -1,0 +1,16 @@
+imp <iostrpm>;
+imp <crdso>;
+namesp test;
+int main() {
+    int a = 0x300000;
+    print("peek @0x300000: ");
+    print(crdso.peek(a));
+    print("poke 'A' then peek: ");
+    crdso.poke(a, 65);
+    print(crdso.peek(a));
+    print("RAM pages:");
+    for (p in OS.RAM) {
+        print(p);
+    }
+    ret 0;
+}
